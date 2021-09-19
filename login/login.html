@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../login/login.css">
+</head>
+<body>
+  <form id="login" action="none">
+    <h1 id="ff-proof" class="ribbon">Dev. center &nbsp;&nbsp;</h1>
+    <div class="apple">
+      <div class="top"><span></span></div>
+      <div class="butt"><span></span></div>
+      <div class="bite"></div>
+  </div>
+    <fieldset id="inputs">
+        <input id="username" type="text" onblur="if(this.value=='')this.value='Pseudo ID';" onfocus="if(this.value=='Pseudo ID')this.value='';" value="Pseudo ID" />
+        <input id="password" type="text" onblur="if(this.value=='')this.value='Mot de passe';" onfocus="if(this.value=='Mot de passe')this.value='';" value="Mot de passe" />
+    </fieldset>
+    <fieldset id="actions">
+        <input type="submit" id="submit" value="connection"/>
+       <p class="option"><a href="#">Mot de pass oubli&eacute;</a>&nbsp;&nbsp;|<a href="#">Inscription</a></p>
+    </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Passport Authentication</h1>
+    <div class="message-box">
+    <h2 id="welcome-message"></h2>
+    <a href="/private">Go to private area</a>
+  </div>
+<script>
+    const req = new XMLHttpRequest()
+req.onreadystatechange = function(){
+    if(req.readyState === 4 && req.status == 200){
+        const user = JSON.parse(req,response).user;
+        document.querySelector('#web-message').innerHTML = `Welcome ${user.username}!!` 
+    }
+};
+req.open("GET", "http://localhost:3000/user",true);
+req.send();
+
+</script>
+</body>
+</html>
